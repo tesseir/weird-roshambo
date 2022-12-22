@@ -3,12 +3,16 @@ var computerChoice;
 var wins; 
 var losses;
 var ties;
-var whoWon;
-var result; 
 
-const roshambo = ["r", "p", "s"];
+const roshambo = ["rock", "paper", "scissor"];
 
 function start(){
+  playerChoice = null;
+  computerChoice = null;
+  wins = false
+  ties = false
+  losses = false
+
   if (confirm("Would you like to play roshambo?")){
     choice()
   }else{ alert("you dont have a choice, pick again.")
@@ -17,13 +21,18 @@ function start(){
 }
 
 function choice(){
-  playerchooses = prompt("pick your impact device: Rock, Paper, or Scissors");
+  playerChoice = prompt("pick your impact device: Rock, Paper, or Scissors").toLowerCase();
+
+  if (playerChoice !== "rock" && playerChoice !== "paper" && playerChoice !== "scissor"){
+    alert("use proper case and pick something that was provided, stoopid")
+    choice()
+  } 
+
   computerchooses()
 }
 
 function computerchooses(){
-  var random = Math.floor(Math.random()*3);
-  computerChoice = roshambo[random];
+  computerChoice = roshambo[Math.floor(Math.random()*3)];
   console.log(computerChoice)
   decideWhoWins();
 }
@@ -52,12 +61,11 @@ displayOutcome();
 }
 
 function displayOutcome(){
-  var result
-  if (ties = true){
+  if (ties === true){
     alert("A shame. We tied... but you lose anyways.")
-  } else if (wins = true){
+  } else if (wins === true){
     alert("Lookie lookie, you won! But you lose regaurdless.")
-  } else if (losses = true){
+  } else if (losses === true){
     alert("Poor poor poor human... you lost as always...")
   }
 
