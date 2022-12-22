@@ -30,34 +30,34 @@ function computerchooses(){
 
 function decideWhoWins(){
  if (playerChoice === "r" && computerChoice === "s" ){
-  wins 
+  wins = true 
 } else if (playerChoice === "p" && computerChoice === "r" ){
-  wins 
+  wins = true 
 } else if (playerChoice === "s" && computerChoice === "p" ){
-  wins 
+  wins = true 
 } else if (playerChoice === "s" && computerChoice === "r" ){
-  losses 
+  losses = true 
 } else if (playerChoice === "r" && computerChoice === "p" ){
-  losses 
+  losses = true 
 } else if (playerChoice === "p" && computerChoice === "s" ){
-  losses
+  losses = true
 } else if (playerChoice === "p" && computerChoice === "p" ){
-  ties 
+  ties = true 
 } else if (playerChoice === "r" && computerChoice === "r" ){
-  ties
+  ties = true
 } else {
-  ties 
+  ties = true 
 }
 displayOutcome();
 }
 
 function displayOutcome(){
   var result
-  if (ties){
+  if (ties = true){
     alert("A shame. We tied... but you lose anyways.")
-  } else if (wins){
+  } else if (wins = true){
     alert("Lookie lookie, you won! But you lose regaurdless.")
-  } else{
+  } else if (losses = true){
     alert("Poor poor poor human... you lost as always...")
   }
 
