@@ -64,7 +64,7 @@ function displayOutcome(){
   if (ties === true){
     alert("A shame. We tied... but you lose anyways.")
   } else if (wins === true){
-    alert("Lookie lookie, you won! But you lose regaurdless.")
+    alert("Lookie lookie, you won! But you lose regardless.")
   } else if (losses === true){
     alert("Poor poor poor human... you lost as always...")
   }
