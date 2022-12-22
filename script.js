@@ -24,7 +24,7 @@ function choice(){
   playerChoice = prompt("pick your impact device: Rock, Paper, or Scissors").toLowerCase();
 
   if (playerChoice !== "rock" && playerChoice !== "paper" && playerChoice !== "scissor"){
-    alert("use proper case and pick something that was provided, stoopid")
+    alert("Pick one of the options, idiot.")
     choice()
   } 
 
